@@ -1,3 +1,4 @@
+import MainSlideshow from '@/presentation/components/MainSlideshow';
 import { useMovies } from '@/presentation/hooks/useMovies';
 import React from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
@@ -20,6 +21,7 @@ const HomeScreen = () => {
     return (
         <View className='mt-2' style={{ paddingTop: safeArea.top }}>
             <Text className='text-3xl font-bold px-4 mb-2'>Home Screen</Text>
+            <MainSlideshow movies={nowPlayingQuery.data ?? []} />
         </View>
     );
 }
