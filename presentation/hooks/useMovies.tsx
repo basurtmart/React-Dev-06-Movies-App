@@ -1,4 +1,4 @@
-import { nowPlayingAction } from "@/core/ations/movies/now-playing.action";
+import { nowPlayingAction } from "@/core/actions/movies/now-playing.action";
 import { useQuery } from "@tanstack/react-query";
 
 export const useMovies = () => {
