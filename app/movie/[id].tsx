@@ -1,3 +1,4 @@
+import MovieHeader from '@/presentation/components/movie/MovieHeader';
 import { useMovie } from '@/presentation/hooks/useMovie';
 import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
@@ -8,7 +9,7 @@ const MovieScreen = () => {
 
     const { movieQuery } = useMovie(+id);
 
-    if (movieQuery.isLoading) {
+    if (movieQuery.isLoading || !movieQuery.data) {
         return (
             <View className='flex flex-1 justify-center items-center'>
                 <Text className='mb-4'>¡Espere por favor!</Text>
@@ -19,7 +20,10 @@ const MovieScreen = () => {
 
     return (
         <ScrollView>
-            <Text>{movieQuery.data?.title ?? 'Título no disponible'}</Text>
+            <MovieHeader
+                poster={movieQuery.data.poster}
+                originalTitle={movieQuery.data.originalTitle}
+                title={movieQuery.data.title} />
         </ScrollView>
     )
 }
