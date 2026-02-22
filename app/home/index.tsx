@@ -35,7 +35,7 @@ const HomeScreen = () => {
 
                 { /* Peliculas Próximamente en cines */}
                 <MovieHorizontalList title='Próximamente en cines' movies={upcomingMoviesQuery.data ?? []} className='mb-5' />
-                <MovieHorizontalList title='Próximamente en cines' movies={upcomingMoviesQuery.data ?? []} className='mb-5' />
+                <MovieHorizontalList movies={upcomingMoviesQuery.data ?? []} className='mb-5' />
 
             </View>
         </ScrollView>
