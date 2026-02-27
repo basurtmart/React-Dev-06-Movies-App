@@ -1,3 +1,4 @@
+import MovieCast from '@/presentation/components/movie/MovieCast';
 import MovieDescription from '@/presentation/components/movie/MovieDescription';
 import MovieHeader from '@/presentation/components/movie/MovieHeader';
 import { useMovie } from '@/presentation/hooks/useMovie';
@@ -27,6 +28,8 @@ const MovieScreen = () => {
                 title={movieQuery.data.title} />
 
             <MovieDescription movie={movieQuery.data} />
+
+            <MovieCast cast={castQuery.data ?? []} />
         </ScrollView>
     )
 }
