@@ -1,6 +1,6 @@
 import { CompleteMovie, Movie } from "../interfaces/movie.interface";
-import { MovieDBMovieReponse } from "../interfaces/moviedb-movie.response";
-import { Result } from "../interfaces/moviedb-response";
+import { MovieDBMovieReponse } from "../interfaces/the-movie-db/moviedb-movie.response";
+import { Result } from "../interfaces/the-movie-db/moviedb-response";
 
 export class MovieMapper {
     static fromTheMovieDBToMovie = (movie: Result): Movie => {
