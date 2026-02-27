@@ -8,7 +8,7 @@ import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
 const MovieScreen = () => {
     const { id } = useLocalSearchParams();
 
-    const { movieQuery } = useMovie(+id);
+    const { movieQuery, castQuery } = useMovie(+id);
 
     if (movieQuery.isLoading || !movieQuery.data) {
         return (
