@@ -7,7 +7,7 @@ export const getMovieCastAction = async (movieId: number | string): Promise<Cast
     try {
         const { data } = await movieApi.get<CreditsResponse>(`/${movieId}/credits`);
         var result = data.cast.map(actor => CastMapper.fromMovieDBCastToEntity(actor));
-        console.log('Movie cast data:', JSON.stringify(result, null, 2)); // Debug log to inspect the data structure
+        // console.log('Movie cast data:', JSON.stringify(result, null, 2)); // Debug log to inspect the data structure
         return result;
     } catch (error) {
         console.error('Error fetching movie cast:', error);
