@@ -1,6 +1,6 @@
 import { Cast } from '@/infrastructure/interfaces/cast.interface';
 import React from 'react';
-import { FlatList, View } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 import ActorCard from './ActorCard';
 
 interface Props {
@@ -9,7 +9,9 @@ interface Props {
 
 const MovieCast = ({ cast }: Props) => {
     return (
-        <View>
+        <View className='mt-5 mb-20'>
+            <Text className="font-bold text-2xl px-5">Actores</Text>
+
             <FlatList
                 horizontal
                 data={cast}
